@@ -43,8 +43,8 @@
         <h2 class="text-lg font-bold text-slate-800">ESP Deliverability & Engagement</h2>
       </div>
 
-      <!-- KPI CARDS -->
-      <section class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+      <!-- KPI CARDS (7 CARDS TOTAL INCLUDING REGISTRATION & USERS) -->
+      <section class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-4">
         <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
           <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Delivered</p>
           <p class="text-2xl font-bold text-slate-900 mt-1">178,499</p>
@@ -52,7 +52,7 @@
         </div>
 
         <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
-          <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Opened</p>
+          <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Open</p>
           <p class="text-2xl font-bold text-emerald-700 mt-1">23,057</p>
           <span class="text-[11px] text-slate-400">Total opens</span>
         </div>
@@ -74,6 +74,18 @@
           <p class="text-2xl font-bold text-purple-700 mt-1">2</p>
           <span class="text-[11px] text-slate-400">Total unsubs</span>
         </div>
+
+        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+          <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Registration</p>
+          <p class="text-2xl font-bold text-amber-600 mt-1">318</p>
+          <span class="text-[11px] text-slate-400">Total registrations</span>
+        </div>
+
+        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+          <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Users</p>
+          <p class="text-2xl font-bold text-indigo-600 mt-1">17</p>
+          <span class="text-[11px] text-slate-400">Total users</span>
+        </div>
       </section>
 
       <!-- DATA TABLE -->
@@ -90,7 +102,7 @@
                 <th class="py-3.5 px-4">Delivered</th>
                 <th class="py-3.5 px-4">Soft Bounce</th>
                 <th class="py-3.5 px-4">Unsubscribe/Blocked</th>
-                <th class="py-3.5 px-4">Opened</th>
+                <th class="py-3.5 px-4">Open</th>
                 <th class="py-3.5 px-4">Click</th>
               </tr>
             </thead>
@@ -161,11 +173,11 @@
       <!-- CHARTS GRID -->
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
 
-        <!-- CHART 1: Delivered vs Opened -->
+        <!-- CHART 1: Delivered vs Open -->
         <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 flex flex-col justify-between">
           <div>
-            <h4 class="text-sm font-bold text-slate-900">Delivered vs. Opened</h4>
-            <p class="text-xs text-slate-500 mb-4">Total count of delivered and opened emails</p>
+            <h4 class="text-sm font-bold text-slate-900">High Volume: Delivered vs. Open</h4>
+            <p class="text-xs text-slate-500 mb-4">Total count of delivered and open emails</p>
           </div>
           <div class="relative h-64">
             <canvas id="chartVolumen"></canvas>
@@ -175,7 +187,7 @@
         <!-- CHART 2: Clicks -->
         <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 flex flex-col justify-between">
           <div>
-            <h4 class="text-sm font-bold text-slate-900">Clicks by ESP</h4>
+            <h4 class="text-sm font-bold text-slate-900">Interaction: Clicks by ESP (Scale 0 - 160)</h4>
             <p class="text-xs text-slate-500 mb-4">Exact click count per provider</p>
           </div>
           <div class="relative h-64">
@@ -186,7 +198,7 @@
         <!-- CHART 3: Unsubscribes -->
         <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 flex flex-col justify-between">
           <div>
-            <h4 class="text-sm font-bold text-slate-900">Unsubscribe / Blocked</h4>
+            <h4 class="text-sm font-bold text-slate-900">Opt-outs: Unsubscribe / Blocked (Scale 0 - 5)</h4>
             <p class="text-xs text-slate-500 mb-4">Exact unsubscribes and blocks by provider</p>
           </div>
           <div class="relative h-64">
@@ -213,14 +225,14 @@
       <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-slate-200 pb-2 gap-2">
         <div class="flex items-center gap-2">
           <span class="px-2.5 py-0.5 rounded bg-slate-900 text-white text-xs font-bold uppercase">Section 2</span>
-          <h2 class="text-lg font-bold text-slate-800">August 01 - 17 - Affiliate Performance</h2>
+          <h2 class="text-lg font-bold text-slate-800">August 01 - 17 - Affiliate / Partner Performance</h2>
         </div>
         <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-800 border border-slate-200 w-fit">
           Aug 01 - 17, 2026
         </span>
       </div>
 
-      <!-- AFFILIATE KPI CARDS (2 CARDS ONLY) -->
+      <!-- AFFILIATE KPI CARDS -->
       <section class="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
           <div>
@@ -287,7 +299,7 @@
         <!-- CHART 1: Sign Ups by Affiliate -->
         <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 flex flex-col justify-between">
           <div>
-            <h4 class="text-sm font-bold text-slate-900">Sign Ups by Affiliate</h4>
+            <h4 class="text-sm font-bold text-slate-900">Sign Ups by Affiliate / Partner</h4>
             <p class="text-xs text-slate-500 mb-4">Total registrations per source (Scale 0 - 220)</p>
           </div>
           <div class="relative h-80">
@@ -298,7 +310,7 @@
         <!-- CHART 2: Users by Affiliate -->
         <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 flex flex-col justify-between">
           <div>
-            <h4 class="text-sm font-bold text-slate-900">Users by Affiliate</h4>
+            <h4 class="text-sm font-bold text-slate-900">Users by Affiliate / Partner</h4>
             <p class="text-xs text-slate-500 mb-4">Active converted users per source (Scale 0 - 15)</p>
           </div>
           <div class="relative h-80">
@@ -322,7 +334,7 @@
         labels: espLabels,
         datasets: [
           { label: 'Delivered', data: [59713, 84517, 0, 10406, 13261, 10602], backgroundColor: '#4d7a5b', borderRadius: 6 },
-          { label: 'Opened', data: [11249, 10593, 0, 335, 485, 395], backgroundColor: '#8cb83e', borderRadius: 6 }
+          { label: 'Open', data: [11249, 10593, 0, 335, 485, 395], backgroundColor: '#8cb83e', borderRadius: 6 }
         ]
       },
       options: {
@@ -367,7 +379,7 @@
     new Chart(document.getElementById('chartPipeline'), {
       type: 'bar',
       data: {
-        labels: ['Delivered', 'Opened', 'Click', 'Unsubscribe/Blocked'],
+        labels: ['Delivered', 'Open', 'Click', 'Unsubscribe/Blocked'],
         datasets: [{ label: 'Total Count', data: [178499, 23057, 259, 2], backgroundColor: ['#4d7a5b', '#8cb83e', '#0284c7', '#9333ea'], borderRadius: 6 }]
       },
       options: {
