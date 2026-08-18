@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>August 09 - 13 - EMAIL & Affiliate Performance Dashboard</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Google Fonts: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .theme-header { background-color: #335c3d; }
+    .theme-header-aff { background-color: #1e293b; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen p-4 md:p-8">
+
+  <div class="max-w-7xl mx-auto space-y-8">
+
+    <!-- HEADER -->
+    <header class="flex flex-col sm:flex-row justify-between items-start sm:items-center bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+      <div>
+        <div class="flex items-center gap-2">
+          <span class="w-3 h-3 rounded-full bg-emerald-500 animate-pulse"></span>
+          <h1 class="text-2xl font-bold text-slate-900 tracking-tight">August 09 - 13 - Performance Dashboard</h1>
+        </div>
+        <p class="text-sm text-slate-500 mt-1">Email Delivery, Interaction & Affiliate Conversions</p>
+      </div>
+      <div class="mt-4 sm:mt-0">
+        <span class="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 border border-emerald-200">
+          Aug 14, 2026
+        </span>
+      </div>
+    </header>
+
+    <!-- ================= SECTION 1: EMAIL PERFORMANCE ================= -->
+    <div class="space-y-6">
+      <div class="flex items-center gap-2 border-b border-slate-200 pb-2">
+        <span class="px-2.5 py-0.5 rounded bg-emerald-800 text-white text-xs font-bold uppercase">Section 1</span>
+        <h2 class="text-lg font-bold text-slate-800">ESP Deliverability & Engagement</h2>
+      </div>
+
+      <!-- KPI CARDS -->
+      <section class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+          <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Delivered</p>
+          <p class="text-2xl font-bold text-slate-900 mt-1">178,499</p>
+          <span class="text-[11px] text-slate-400">Total sent</span>
+        </div>
+
+        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+          <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Opened</p>
+          <p class="text-2xl font-bold text-emerald-700 mt-1">23,057</p>
+          <span class="text-[11px] text-slate-400">Total opens</span>
+        </div>
+
+        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+          <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Click</p>
+          <p class="text-2xl font-bold text-sky-700 mt-1">259</p>
+          <span class="text-[11px] text-slate-400">Total clicks</span>
+        </div>
+
+        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+          <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Soft Bounce</p>
+          <p class="text-2xl font-bold text-slate-900 mt-1">0</p>
+          <span class="text-[11px] text-slate-400">Total bounces</span>
+        </div>
+
+        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+          <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Unsub / Blocked</p>
+          <p class="text-2xl font-bold text-purple-700 mt-1">2</p>
+          <span class="text-[11px] text-slate-400">Total unsubs</span>
+        </div>
+      </section>
+
+      <!-- DATA TABLE -->
+      <section class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+        <div class="px-6 py-4 border-b border-slate-100 flex justify-between items-center bg-slate-50/50">
+          <h3 class="text-sm font-bold text-slate-800 uppercase tracking-wider">ESP Breakdown Table</h3>
+          <span class="text-xs text-slate-500">6 Providers</span>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm text-right">
+            <thead class="theme-header text-white text-xs uppercase tracking-wider font-semibold">
+              <tr>
+                <th class="py-3.5 px-4 text-left">ESP</th>
+                <th class="py-3.5 px-4">Delivered</th>
+                <th class="py-3.5 px-4">Soft Bounce</th>
+                <th class="py-3.5 px-4">Unsubscribe/Blocked</th>
+                <th class="py-3.5 px-4">Opened</th>
+                <th class="py-3.5 px-4">Click</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 text-slate-700">
+              <tr class="hover:bg-slate-50 transition-colors">
+                <td class="py-3.5 px-4 text-left font-medium text-slate-900">Sendgrid (IP 1)</td>
+                <td class="py-3.5 px-4 font-mono">59,713</td>
+                <td class="py-3.5 px-4 font-mono text-slate-400">0</td>
+                <td class="py-3.5 px-4 font-mono text-slate-400">0</td>
+                <td class="py-3.5 px-4 font-mono text-emerald-700 font-semibold">11,249</td>
+                <td class="py-3.5 px-4 font-mono text-sky-700 font-semibold">140</td>
+              </tr>
+              <tr class="hover:bg-slate-50 transition-colors bg-slate-50/40">
+                <td class="py-3.5 px-4 text-left font-medium text-slate-900">Sendgrid (IP 2 / SH)</td>
+                <td class="py-3.5 px-4 font-mono">84,517</td>
+                <td class="py-3.5 px-4 font-mono text-slate-400">0</td>
+                <td class="py-3.5 px-4 font-mono text-purple-700 font-semibold">2</td>
+                <td class="py-3.5 px-4 font-mono text-emerald-700 font-semibold">10,593</td>
+                <td class="py-3.5 px-4 font-mono text-sky-700 font-semibold">119</td>
+              </tr>
+              <tr class="hover:bg-slate-50 transition-colors">
+                <td class="py-3.5 px-4 text-left font-medium text-slate-500">CAM (IP1)</td>
+                <td class="py-3.5 px-4 font-mono text-slate-400">0</td>
+                <td class="py-3.5 px-4 font-mono text-slate-400">0</td>
+                <td class="py-3.5 px-4 font-mono text-slate-400">0</td>
+                <td class="py-3.5 px-4 font-mono text-slate-400">0</td>
+                <td class="py-3.5 px-4 font-mono text-slate-400">0</td>
+              </tr>
+              <tr class="hover:bg-slate-50 transition-colors bg-slate-50/40">
+                <td class="py-3.5 px-4 text-left font-medium text-slate-900">SMPT (IP 1)</td>
+                <td class="py-3.5 px-4 font-mono">10,406</td>
+                <td class="py-3.5 px-4 font-mono text-slate-400">0</td>
+                <td class="py-3.5 px-4 font-mono text-slate-400">0</td>
+                <td class="py-3.5 px-4 font-mono">335</td>
+                <td class="py-3.5 px-4 font-mono text-slate-400">0</td>
+              </tr>
+              <tr class="hover:bg-slate-50 transition-colors">
+                <td class="py-3.5 px-4 text-left font-medium text-slate-900">SMPT (IP 2)</td>
+                <td class="py-3.5 px-4 font-mono">13,261</td>
+                <td class="py-3.5 px-4 font-mono text-slate-400">0</td>
+                <td class="py-3.5 px-4 font-mono text-slate-400">0</td>
+                <td class="py-3.5 px-4 font-mono">485</td>
+                <td class="py-3.5 px-4 font-mono text-slate-400">0</td>
+              </tr>
+              <tr class="hover:bg-slate-50 transition-colors bg-slate-50/40">
+                <td class="py-3.5 px-4 text-left font-medium text-slate-900">SMPT (IP 3)</td>
+                <td class="py-3.5 px-4 font-mono">10,602</td>
+                <td class="py-3.5 px-4 font-mono text-slate-400">0</td>
+                <td class="py-3.5 px-4 font-mono text-slate-400">0</td>
+                <td class="py-3.5 px-4 font-mono">395</td>
+                <td class="py-3.5 px-4 font-mono text-slate-400">0</td>
+              </tr>
+            </tbody>
+            <tfoot class="border-t-2 border-slate-900 bg-white font-bold text-slate-900">
+              <tr>
+                <td class="py-3.5 px-4 text-left">Grand total</td>
+                <td class="py-3.5 px-4 font-mono">178,499</td>
+                <td class="py-3.5 px-4 font-mono">0</td>
+                <td class="py-3.5 px-4 font-mono">2</td>
+                <td class="py-3.5 px-4 font-mono">23,057</td>
+                <td class="py-3.5 px-4 font-mono">259</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </section>
+
+      <!-- CHARTS GRID -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+        <!-- CHART 1: Delivered vs Opened -->
+        <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 flex flex-col justify-between">
+          <div>
+            <h4 class="text-sm font-bold text-slate-900">High Volume: Delivered vs. Opened</h4>
+            <p class="text-xs text-slate-500 mb-4">Total count of delivered and opened emails</p>
+          </div>
+          <div class="relative h-64">
+            <canvas id="chartVolumen"></canvas>
+          </div>
+        </div>
+
+        <!-- CHART 2: Clicks -->
+        <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 flex flex-col justify-between">
+          <div>
+            <h4 class="text-sm font-bold text-slate-900">Interaction: Clicks by ESP (Scale 0 - 160)</h4>
+            <p class="text-xs text-slate-500 mb-4">Exact click count per provider</p>
+          </div>
+          <div class="relative h-64">
+            <canvas id="chartClicksBar"></canvas>
+          </div>
+        </div>
+
+        <!-- CHART 3: Unsubscribes -->
+        <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 flex flex-col justify-between">
+          <div>
+            <h4 class="text-sm font-bold text-slate-900">Opt-outs: Unsubscribe / Blocked (Scale 0 - 5)</h4>
+            <p class="text-xs text-slate-500 mb-4">Exact unsubscribes and blocks by provider</p>
+          </div>
+          <div class="relative h-64">
+            <canvas id="chartUnsubBar"></canvas>
+          </div>
+        </div>
+
+        <!-- CHART 4: Pipeline -->
+        <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 flex flex-col justify-between">
+          <div>
+            <h4 class="text-sm font-bold text-slate-900">Grand Total Metric Pipeline</h4>
+            <p class="text-xs text-slate-500 mb-4">Overall volume at each stage</p>
+          </div>
+          <div class="relative h-64">
+            <canvas id="chartPipeline"></canvas>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ================= SECTION 2: SIGN UPS & USERS ================= -->
+    <div class="space-y-6 pt-4">
+      <div class="flex items-center gap-2 border-b border-slate-200 pb-2">
+        <span class="px-2.5 py-0.5 rounded bg-slate-900 text-white text-xs font-bold uppercase">Section 2</span>
+        <h2 class="text-lg font-bold text-slate-800">Affiliate / Partner Performance (Sign Ups & Users)</h2>
+      </div>
+
+      <!-- AFFILIATE KPI CARDS -->
+      <section class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
+          <div>
+            <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Total Sign Ups</p>
+            <p class="text-3xl font-bold text-amber-600 mt-1">318</p>
+          </div>
+          <div class="p-3 bg-amber-50 rounded-xl">
+            <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"></path></svg>
+          </div>
+        </div>
+
+        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
+          <div>
+            <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Total Users</p>
+            <p class="text-3xl font-bold text-indigo-600 mt-1">17</p>
+          </div>
+          <div class="p-3 bg-indigo-50 rounded-xl">
+            <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+          </div>
+        </div>
+
+        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
+          <div>
+            <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Active Affiliates</p>
+            <p class="text-3xl font-bold text-slate-900 mt-1">9</p>
+          </div>
+          <div class="p-3 bg-slate-100 rounded-xl">
+            <svg class="w-6 h-6 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- AFFILIATE TABLE & AFFILIATE CHARTS -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+        <!-- AFFILIATE TABLE (1 col) -->
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden flex flex-col justify-between">
+          <div>
+            <div class="px-5 py-4 border-b border-slate-100 bg-slate-50/50">
+              <h3 class="text-sm font-bold text-slate-800 uppercase tracking-wider">Affiliate Breakdown</h3>
+            </div>
+            <div class="overflow-x-auto">
+              <table class="w-full text-sm text-right">
+                <thead class="theme-header-aff text-white text-xs uppercase tracking-wider font-semibold">
+                  <tr>
+                    <th class="py-3 px-4 text-left">Affiliate / Partner</th>
+                    <th class="py-3 px-4">Sign Ups</th>
+                    <th class="py-3 px-4">Users</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100 text-slate-700">
+                  <tr class="hover:bg-slate-50"><td class="py-2.5 px-4 text-left font-medium text-slate-900">GameTime Digital</td><td class="py-2.5 px-4 font-mono font-bold text-amber-600">197</td><td class="py-2.5 px-4 font-mono font-bold text-indigo-600">11</td></tr>
+                  <tr class="hover:bg-slate-50 bg-slate-50/40"><td class="py-2.5 px-4 text-left font-medium text-slate-900">CHANCED</td><td class="py-2.5 px-4 font-mono font-semibold">60</td><td class="py-2.5 px-4 font-mono font-semibold text-indigo-600">2</td></tr>
+                  <tr class="hover:bg-slate-50"><td class="py-2.5 px-4 text-left font-medium text-slate-900">AFF 66</td><td class="py-2.5 px-4 font-mono font-semibold">19</td><td class="py-2.5 px-4 font-mono font-semibold text-indigo-600">1</td></tr>
+                  <tr class="hover:bg-slate-50 bg-slate-50/40"><td class="py-2.5 px-4 text-left font-medium text-slate-900">Basher Agency</td><td class="py-2.5 px-4 font-mono font-semibold">18</td><td class="py-2.5 px-4 font-mono text-slate-400">0</td></tr>
+                  <tr class="hover:bg-slate-50"><td class="py-2.5 px-4 text-left font-medium text-slate-900">Splash</td><td class="py-2.5 px-4 font-mono font-semibold">10</td><td class="py-2.5 px-4 font-mono font-semibold text-indigo-600">1</td></tr>
+                  <tr class="hover:bg-slate-50 bg-slate-50/40"><td class="py-2.5 px-4 text-left font-medium text-slate-900">Acebet</td><td class="py-2.5 px-4 font-mono font-semibold">7</td><td class="py-2.5 px-4 font-mono font-semibold text-indigo-600">2</td></tr>
+                  <tr class="hover:bg-slate-50"><td class="py-2.5 px-4 text-left font-medium text-slate-900">CoinsRoyale</td><td class="py-2.5 px-4 font-mono">4</td><td class="py-2.5 px-4 font-mono text-slate-400">0</td></tr>
+                  <tr class="hover:bg-slate-50 bg-slate-50/40"><td class="py-2.5 px-4 text-left font-medium text-slate-900">ALL IN AFFILIATES</td><td class="py-2.5 px-4 font-mono">2</td><td class="py-2.5 px-4 font-mono text-slate-400">0</td></tr>
+                  <tr class="hover:bg-slate-50"><td class="py-2.5 px-4 text-left font-medium text-slate-900">EPC</td><td class="py-2.5 px-4 font-mono">1</td><td class="py-2.5 px-4 font-mono text-slate-400">0</td></tr>
+                </tbody>
+                <tfoot class="border-t-2 border-slate-900 bg-white font-bold text-slate-900">
+                  <tr>
+                    <td class="py-3 px-4 text-left">Grand total</td>
+                    <td class="py-3 px-4 font-mono text-amber-600">318</td>
+                    <td class="py-3 px-4 font-mono text-indigo-600">17</td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- AFFILIATE CHART 1: Sign Ups by Affiliate (1 col) -->
+        <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 flex flex-col justify-between">
+          <div>
+            <h4 class="text-sm font-bold text-slate-900">Sign Ups by Affiliate / Partner</h4>
+            <p class="text-xs text-slate-500 mb-4">Total registrations per source (Scale 0 - 220)</p>
+          </div>
+          <div class="relative h-80">
+            <canvas id="chartAffSignUps"></canvas>
+          </div>
+        </div>
+
+        <!-- AFFILIATE CHART 2: Users by Affiliate (1 col) -->
+        <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 flex flex-col justify-between">
+          <div>
+            <h4 class="text-sm font-bold text-slate-900">Users by Affiliate / Partner</h4>
+            <p class="text-xs text-slate-500 mb-4">Active converted users per source (Scale 0 - 15)</p>
+          </div>
+          <div class="relative h-80">
+            <canvas id="chartAffUsers"></canvas>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SCRIPTS CHART.JS -->
+  <script>
+    // --- SECTION 1: ESP DATA ---
+    const espLabels = ['Sendgrid (IP 1)', 'Sendgrid (IP 2 / SH)', 'CAM (IP1)', 'SMPT (IP 1)', 'SMPT (IP 2)', 'SMPT (IP 3)'];
+
+    new Chart(document.getElementById('chartVolumen'), {
+      type: 'bar',
+      data: {
+        labels: espLabels,
+        datasets: [
+          { label: 'Delivered', data: [59713, 84517, 0, 10406, 13261, 10602], backgroundColor: '#4d7a5b', borderRadius: 6 },
+          { label: 'Opened', data: [11249, 10593, 0, 335, 485, 395], backgroundColor: '#8cb83e', borderRadius: 6 }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { position: 'top' }, tooltip: { callbacks: { label: ctx => `${ctx.dataset.label}: ${ctx.raw.toLocaleString()}` } } },
+        scales: {
+          y: { grid: { color: '#f1f5f9' }, ticks: { callback: v => (v >= 1000 ? (v / 1000) + 'k' : v) } },
+          x: { grid: { display: false } }
+        }
+      }
+    });
+
+    new Chart(document.getElementById('chartClicksBar'), {
+      type: 'bar',
+      data: {
+        labels: espLabels,
+        datasets: [{ label: 'Click', data: [140, 119, 0, 0, 0, 0], backgroundColor: '#0284c7', borderRadius: 6 }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => `Clicks: ${ctx.raw.toLocaleString()}` } } },
+        scales: { y: { max: 160, grid: { color: '#f1f5f9' }, ticks: { stepSize: 20 } }, x: { grid: { display: false } } }
+      }
+    });
+
+    new Chart(document.getElementById('chartUnsubBar'), {
+      type: 'bar',
+      data: {
+        labels: espLabels,
+        datasets: [{ label: 'Unsubscribe / Blocked', data: [0, 2, 0, 0, 0, 0], backgroundColor: '#9333ea', borderRadius: 6 }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => `Unsubscribes: ${ctx.raw.toLocaleString()}` } } },
+        scales: { y: { max: 5, grid: { color: '#f1f5f9' }, ticks: { stepSize: 1 } }, x: { grid: { display: false } } }
+      }
+    });
+
+    new Chart(document.getElementById('chartPipeline'), {
+      type: 'bar',
+      data: {
+        labels: ['Delivered', 'Opened', 'Click', 'Unsubscribe/Blocked'],
+        datasets: [{ label: 'Total Count', data: [178499, 23057, 259, 2], backgroundColor: ['#4d7a5b', '#8cb83e', '#0284c7', '#9333ea'], borderRadius: 6 }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => `Total: ${ctx.raw.toLocaleString()}` } } },
+        scales: { y: { type: 'logarithmic', grid: { color: '#f1f5f9' }, ticks: { callback: v => Number(v).toLocaleString() } }, x: { grid: { display: false } } }
+      }
+    });
+
+    // --- SECTION 2: AFFILIATE DATA ---
+    const affLabels = ['GameTime Digital', 'CHANCED', 'AFF 66', 'Basher Agency', 'Splash', 'Acebet', 'CoinsRoyale', 'ALL IN AFFILIATES', 'EPC'];
+    const signupsData = [197, 60, 19, 18, 10, 7, 4, 2, 1];
+    const usersData = [11, 2, 1, 0, 1, 2, 0, 0, 0];
+
+    // Chart Sign Ups
+    new Chart(document.getElementById('chartAffSignUps'), {
+      type: 'bar',
+      data: {
+        labels: affLabels,
+        datasets: [{
+          label: 'Sign Ups',
+          data: signupsData,
+          backgroundColor: '#d97706',
+          borderRadius: 6
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { callbacks: { label: ctx => `Sign Ups: ${ctx.raw.toLocaleString()}` } }
+        },
+        scales: {
+          x: { max: 220, grid: { color: '#f1f5f9' } },
+          y: { grid: { display: false } }
+        }
+      }
+    });
+
+    // Chart Users
+    new Chart(document.getElementById('chartAffUsers'), {
+      type: 'bar',
+      data: {
+        labels: affLabels,
+        datasets: [{
+          label: 'Users',
+          data: usersData,
+          backgroundColor: '#4f46e5',
+          borderRadius: 6
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { callbacks: { label: ctx => `Users: ${ctx.raw.toLocaleString()}` } }
+        },
+        scales: {
+          x: { max: 15, grid: { color: '#f1f5f9' }, ticks: { stepSize: 3 } },
+          y: { grid: { display: false } }
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>
