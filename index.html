@@ -16,6 +16,7 @@
     .theme-subtotal { background-color: #fef9c3; }
     .theme-esp-group { background-color: #2563eb; }
     .theme-ip-group { background-color: #dbeafe; }
+    .theme-header-ops { background-color: #dbeafe; }
     .theme-header-aff { background-color: #1e293b; }
   </style>
 </head>
@@ -39,7 +40,7 @@
       </div>
     </header>
 
-    <!-- ================= SECTION 1: EMAIL & DOMAIN PERFORMANCE (AUG 01 - 19) ================= -->
+    <!-- ================= SECTION 1: EMAIL & DOMAIN PERFORMANCE ================= -->
     <div class="space-y-6">
       <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-slate-200 pb-2 gap-2">
         <div class="flex items-center gap-2">
@@ -106,7 +107,7 @@
         </div>
       </section>
 
-      <!-- DATA TABLE (AUGUST 01 - 19 DATA) -->
+      <!-- DATA TABLE -->
       <section class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
         <div class="px-6 py-4 border-b border-slate-100 flex justify-between items-center bg-slate-50/50">
           <h3 class="text-sm font-bold text-slate-800 uppercase tracking-wider">Deliverability Breakdown Table (ESP & Domain)</h3>
@@ -145,7 +146,7 @@
               <tr><td class="py-1.5 px-3"></td><td class="py-1.5 px-3 text-left">Other</td><td>4,278</td><td>0</td><td>5</td><td>115</td><td>2.69%</td><td>13</td><td>11.30%</td><td>0.30%</td><td>0</td><td>0</td></tr>
               <tr class="theme-subtotal font-bold text-slate-900"><td class="py-1.5 px-3"></td><td class="py-1.5 px-3 text-left">TOTAL</td><td>40,515</td><td>0</td><td>26</td><td>9,528</td><td>23.52%</td><td>186</td><td>1.95%</td><td>0.46%</td><td>0</td><td>2</td></tr>
 
-              <!-- IP 2 / SH (UPDATED AUG 01 - 19) -->
+              <!-- IP 2 / SH -->
               <tr class="theme-ip-group font-semibold text-slate-900"><td colspan="12" class="py-1 px-3 text-left">IP 2 / SH</td></tr>
               <tr><td class="py-1.5 px-3"></td><td class="py-1.5 px-3 text-left">Outlook</td><td>1,178</td><td>0</td><td>11</td><td>161</td><td>13.67%</td><td>2</td><td>1.24%</td><td>0.17%</td><td>0</td><td>1</td></tr>
               <tr><td class="py-1.5 px-3"></td><td class="py-1.5 px-3 text-left">Hotmail</td><td>122</td><td>0</td><td>17</td><td>28</td><td>22.95%</td><td>0</td><td>0.00%</td><td>0.00%</td><td>0</td><td>0</td></tr>
@@ -217,12 +218,12 @@
         </div>
       </section>
 
-      <!-- SECTION 1 CHARTS (ESP LEVEL & DOMAIN LEVEL) -->
+      <!-- SECTION 1 CHARTS (3 ESP CHARTS + 3 DOMAIN CHARTS) -->
       <div class="space-y-6">
         
-        <!-- BLOCK 1: ESP LEVEL CHARTS -->
+        <!-- BLOCK 1: ESP LEVEL CHARTS (3 CHARTS) -->
         <h3 class="text-sm font-bold text-slate-700 uppercase tracking-wider">1. ESP Deliverability & Engagement Charts</h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
           
           <!-- Chart 1: Delivered vs Open by ESP -->
           <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-200 flex flex-col justify-between">
@@ -230,7 +231,7 @@
               <h4 class="text-xs font-bold text-slate-900 uppercase">Delivered vs. Open</h4>
               <p class="text-[11px] text-slate-500 mb-2">Volume comparison by ESP</p>
             </div>
-            <div class="relative h-56">
+            <div class="relative h-60">
               <canvas id="chartEspVolumen"></canvas>
             </div>
           </div>
@@ -241,7 +242,7 @@
               <h4 class="text-xs font-bold text-slate-900 uppercase">Clicks by ESP</h4>
               <p class="text-[11px] text-slate-500 mb-2">Exact click counts (Scale 0 - 250)</p>
             </div>
-            <div class="relative h-56">
+            <div class="relative h-60">
               <canvas id="chartEspClicks"></canvas>
             </div>
           </div>
@@ -252,68 +253,46 @@
               <h4 class="text-xs font-bold text-slate-900 uppercase">Open Rate (%) by ESP</h4>
               <p class="text-[11px] text-slate-500 mb-2">Open efficiency per IP</p>
             </div>
-            <div class="relative h-56">
+            <div class="relative h-60">
               <canvas id="chartEspOpenRate"></canvas>
-            </div>
-          </div>
-
-          <!-- Chart 4: Unsubscribes by ESP -->
-          <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-200 flex flex-col justify-between">
-            <div>
-              <h4 class="text-xs font-bold text-slate-900 uppercase">Unsubscribes by ESP</h4>
-              <p class="text-[11px] text-slate-500 mb-2">Opt-outs per IP (Scale 0 - 8)</p>
-            </div>
-            <div class="relative h-56">
-              <canvas id="chartEspUnsub"></canvas>
             </div>
           </div>
 
         </div>
 
-        <!-- BLOCK 2: DOMAIN LEVEL CHARTS -->
+        <!-- BLOCK 2: DOMAIN LEVEL CHARTS (3 CHARTS) -->
         <h3 class="text-sm font-bold text-slate-700 uppercase tracking-wider pt-2">2. Mailbox Domain Deliverability Charts</h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
 
-          <!-- Chart 5: Delivered by Domain -->
+          <!-- Chart 4: Delivered by Domain -->
           <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-200 flex flex-col justify-between">
             <div>
               <h4 class="text-xs font-bold text-slate-900 uppercase">Delivered by Domain</h4>
               <p class="text-[11px] text-slate-500 mb-2">Total volume sent per domain</p>
             </div>
-            <div class="relative h-56">
+            <div class="relative h-60">
               <canvas id="chartDomainDelivered"></canvas>
             </div>
           </div>
 
-          <!-- Chart 6: Open Rate (%) by Domain -->
+          <!-- Chart 5: Open Rate (%) by Domain -->
           <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-200 flex flex-col justify-between">
             <div>
               <h4 class="text-xs font-bold text-slate-900 uppercase">Open Rate (%) by Domain</h4>
               <p class="text-[11px] text-slate-500 mb-2">Aperture rate by domain</p>
             </div>
-            <div class="relative h-56">
+            <div class="relative h-60">
               <canvas id="chartDomainOpenRate"></canvas>
             </div>
           </div>
 
-          <!-- Chart 7: Hard Bounces by Domain -->
-          <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-200 flex flex-col justify-between">
-            <div>
-              <h4 class="text-xs font-bold text-slate-900 uppercase">Hard Bounces by Domain</h4>
-              <p class="text-[11px] text-slate-500 mb-2">Invalid addresses per domain</p>
-            </div>
-            <div class="relative h-56">
-              <canvas id="chartDomainHardBounce"></canvas>
-            </div>
-          </div>
-
-          <!-- Chart 8: Clicks by Domain -->
+          <!-- Chart 6: Clicks by Domain -->
           <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-200 flex flex-col justify-between">
             <div>
               <h4 class="text-xs font-bold text-slate-900 uppercase">Clicks by Domain</h4>
               <p class="text-[11px] text-slate-500 mb-2">Clicks generated per domain</p>
             </div>
-            <div class="relative h-56">
+            <div class="relative h-60">
               <canvas id="chartDomainClicks"></canvas>
             </div>
           </div>
@@ -323,7 +302,81 @@
       </div>
     </div>
 
-    <!-- ================= SECTION 2: ADVERTISER PERFORMANCE (UNCHANGED) ================= -->
+    <!-- ================= OPS TEAM PERFORMANCE TABLES ================= -->
+    <div class="space-y-4 pt-2">
+      <div class="flex items-center gap-2 border-b border-slate-200 pb-2">
+        <span class="px-2.5 py-0.5 rounded bg-indigo-800 text-white text-xs font-bold uppercase">Team Ops</span>
+        <h2 class="text-lg font-bold text-slate-800">Email & Social Operations Performance</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <!-- TABLE 1: Jessie – Social/Email-Ops -->
+        <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200">
+          <h3 class="text-base font-bold text-slate-900 mb-3">Jessie – Social/Email-Ops</h3>
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm text-center border-collapse">
+              <thead class="theme-header-ops font-bold text-slate-800 text-xs uppercase">
+                <tr>
+                  <th class="py-2.5 px-3 text-left border border-blue-200">Item</th>
+                  <th class="py-2.5 px-3 border border-blue-200">KPIs</th>
+                  <th class="py-2.5 px-3 border border-blue-200">MTD</th>
+                  <th class="py-2.5 px-3 border border-blue-200">RR</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200 text-slate-800 font-medium">
+                <tr>
+                  <td class="py-2.5 px-3 text-left font-bold border border-slate-200">Registrations</td>
+                  <td class="py-2.5 px-3 border border-slate-200 font-bold">200</td>
+                  <td class="py-2.5 px-3 border border-slate-200">126</td>
+                  <td class="py-2.5 px-3 border border-slate-200 font-bold text-emerald-600">217</td>
+                </tr>
+                <tr>
+                  <td class="py-2.5 px-3 text-left font-bold border border-slate-200">Users</td>
+                  <td class="py-2.5 px-3 border border-slate-200 font-bold">15</td>
+                  <td class="py-2.5 px-3 border border-slate-200">3</td>
+                  <td class="py-2.5 px-3 border border-slate-200 font-bold text-rose-600">5</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- TABLE 2: Andrea – Email Ops -->
+        <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200">
+          <h3 class="text-base font-bold text-slate-900 mb-3">Andrea – Email Ops</h3>
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm text-center border-collapse">
+              <thead class="theme-header-ops font-bold text-slate-800 text-xs uppercase">
+                <tr>
+                  <th class="py-2.5 px-3 text-left border border-blue-200">ITEM</th>
+                  <th class="py-2.5 px-3 border border-blue-200">KPIs</th>
+                  <th class="py-2.5 px-3 border border-blue-200">MTD</th>
+                  <th class="py-2.5 px-3 border border-blue-200">RR</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200 text-slate-800 font-medium">
+                <tr>
+                  <td class="py-2.5 px-3 text-left font-bold border border-slate-200">Registrations</td>
+                  <td class="py-2.5 px-3 border border-slate-200 font-bold">200</td>
+                  <td class="py-2.5 px-3 border border-slate-200">125</td>
+                  <td class="py-2.5 px-3 border border-slate-200 font-bold text-emerald-600">215</td>
+                </tr>
+                <tr>
+                  <td class="py-2.5 px-3 text-left font-bold border border-slate-200">Users</td>
+                  <td class="py-2.5 px-3 border border-slate-200 font-bold">15</td>
+                  <td class="py-2.5 px-3 border border-slate-200">4</td>
+                  <td class="py-2.5 px-3 border border-slate-200 font-bold text-rose-600">7</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ================= SECTION 2: ADVERTISER PERFORMANCE ================= -->
     <div class="space-y-6 pt-4">
       <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-slate-200 pb-2 gap-2">
         <div class="flex items-center gap-2">
@@ -388,7 +441,7 @@
               <tr class="hover:bg-slate-50"><td class="py-3 px-4 text-left font-medium text-slate-900">AFF 66</td><td class="py-3 px-4 font-mono font-semibold">19</td><td class="py-3 px-4 font-mono font-semibold text-indigo-600">1</td></tr>
               <tr class="hover:bg-slate-50 bg-slate-50/40"><td class="py-3 px-4 text-left font-medium text-slate-900">Basher Agency</td><td class="py-3 px-4 font-mono font-semibold">18</td><td class="py-3 px-4 font-mono text-slate-400">0</td></tr>
               <tr class="hover:bg-slate-50"><td class="py-3 px-4 text-left font-medium text-slate-900">Splash</td><td class="py-3 px-4 font-mono font-semibold">10</td><td class="py-3 px-4 font-mono font-semibold text-indigo-600">1</td></tr>
-              <tr class="hover:bg-slate-50 bg-slate-50/40"><td class="py-3 px-4 text-left font-medium text-slate-900">Acebet</td><td class="py-3 px-4 font-mono font-semibold">7</td><td class="py-3 px-4 font-mono text-indigo-600">2</td></tr>
+              <tr class="hover:bg-slate-50 bg-slate-50/40"><td class="py-3 px-4 text-left font-medium text-slate-900">Acebet</td><td class="py-3 px-4 font-mono font-semibold">7</td><td class="py-3 px-4 font-mono font-semibold text-indigo-600">2</td></tr>
               <tr class="hover:bg-slate-50"><td class="py-3 px-4 text-left font-medium text-slate-900">CoinsRoyale</td><td class="py-3 px-4 font-mono">4</td><td class="py-3 px-4 font-mono text-slate-400">0</td></tr>
               <tr class="hover:bg-slate-50 bg-slate-50/40"><td class="py-3 px-4 text-left font-medium text-slate-900">ALL IN AFFILIATES</td><td class="py-3 px-4 font-mono">2</td><td class="py-3 px-4 font-mono text-slate-400">0</td></tr>
               <tr class="hover:bg-slate-50"><td class="py-3 px-4 text-left font-medium text-slate-900">EPC</td><td class="py-3 px-4 font-mono">1</td><td class="py-3 px-4 font-mono text-slate-400">0</td></tr>
@@ -494,33 +547,14 @@
       }
     });
 
-    // 4. Unsubscribes by ESP
-    new Chart(document.getElementById('chartEspUnsub'), {
-      type: 'bar',
-      data: {
-        labels: ['SEG IP1', 'SEG IP2', 'SMPT IP1', 'SMPT IP2', 'SMPT IP3'],
-        datasets: [{ label: 'Unsubscribes', data: [2, 2, 2, 6, 6], backgroundColor: '#9333ea', borderRadius: 4 }]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: { legend: { display: false } },
-        scales: {
-          y: { max: 8, grid: { color: '#f1f5f9' }, ticks: { stepSize: 2, font: { size: 9 } } },
-          x: { grid: { display: false }, ticks: { font: { size: 9 } } }
-        }
-      }
-    });
-
 
     // ================= BLOCK 2: DOMAIN LEVEL DATA (AUG 01 - 19) =================
     const domains = ['Gmail', 'Other', 'Yahoo', 'iCloud', 'Outlook', 'Hotmail', 'Aol'];
     const domainDelivered = [168420, 17203, 6895, 4866, 2091, 517, 366];
     const domainOpenRates = [12.08, 2.70, 6.27, 7.93, 13.30, 27.27, 13.39];
-    const domainHardBounces = [49, 15, 3, 8, 13, 17, 0];
     const domainClicks = [304, 41, 13, 26, 5, 0, 0];
 
-    // 5. Delivered Volume by Domain
+    // 4. Delivered Volume by Domain
     new Chart(document.getElementById('chartDomainDelivered'), {
       type: 'bar',
       data: {
@@ -538,7 +572,7 @@
       }
     });
 
-    // 6. Open Rate (%) by Domain
+    // 5. Open Rate (%) by Domain
     new Chart(document.getElementById('chartDomainOpenRate'), {
       type: 'bar',
       data: {
@@ -557,25 +591,7 @@
       }
     });
 
-    // 7. Hard Bounces by Domain
-    new Chart(document.getElementById('chartDomainHardBounce'), {
-      type: 'bar',
-      data: {
-        labels: domains,
-        datasets: [{ label: 'Hard Bounce', data: domainHardBounces, backgroundColor: '#ef4444', borderRadius: 4 }]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: { legend: { display: false } },
-        scales: {
-          y: { max: 60, grid: { color: '#f1f5f9' }, ticks: { stepSize: 10, font: { size: 9 } } },
-          x: { grid: { display: false }, ticks: { font: { size: 9 } } }
-        }
-      }
-    });
-
-    // 8. Clicks by Domain
+    // 6. Clicks by Domain
     new Chart(document.getElementById('chartDomainClicks'), {
       type: 'bar',
       data: {
@@ -594,7 +610,7 @@
     });
 
 
-    // ================= BLOCK 3: ADVERTISER DATA (UNCHANGED) =================
+    // ================= BLOCK 3: ADVERTISER DATA =================
     const affLabels = ['GameTime Digital', 'CHANCED', 'AFF 66', 'Basher Agency', 'Splash', 'Acebet', 'CoinsRoyale', 'ALL IN AFFILIATES', 'EPC'];
     const signupsData = [197, 60, 19, 18, 10, 7, 4, 2, 1];
     const usersData = [11, 2, 1, 0, 1, 2, 0, 0, 0];
