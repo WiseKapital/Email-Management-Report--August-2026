@@ -157,12 +157,6 @@
               <tr><td class="py-1.5 px-3"></td><td class="py-1.5 px-3 text-left">Other</td><td>7,020</td><td>0</td><td>5</td><td>108</td><td>1.54%</td><td>23</td><td>21.30%</td><td>0.33%</td><td>0</td><td>0</td></tr>
               <tr class="theme-subtotal font-bold text-slate-900"><td class="py-1.5 px-3"></td><td class="py-1.5 px-3 text-left">TOTAL</td><td>66,524</td><td>0</td><td>59</td><td>7,323</td><td>11.01%</td><td>112</td><td>1.53%</td><td>0.17%</td><td>0</td><td>0</td></tr>
 
-              <!-- CAM (Campaigner) -->
-              <tr class="theme-esp-group text-white font-bold"><td colspan="12" class="py-2 px-3 text-left">CAM (Campaigner)</td></tr>
-              <tr class="theme-ip-group font-semibold text-slate-900"><td colspan="12" class="py-1 px-3 text-left">IP 1</td></tr>
-              <tr><td class="py-1.5 px-3"></td><td class="py-1.5 px-3 text-left text-slate-400">All Domains</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.00%</td><td>0</td><td>0.00%</td><td>0.00%</td><td>0</td><td>0</td></tr>
-              <tr class="theme-subtotal font-bold text-slate-900"><td class="py-1.5 px-3"></td><td class="py-1.5 px-3 text-left">TOTAL</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.00%</td><td>0</td><td>0.00%</td><td>0.00%</td><td>0</td><td>0</td></tr>
-
               <!-- SMPT -->
               <tr class="theme-esp-group text-white font-bold"><td colspan="12" class="py-2 px-3 text-left">SMPT</td></tr>
               
@@ -376,7 +370,7 @@
 
       </div>
 
-      <!-- ROW 2: TEAM BREAKDOWN TABLES (ACTUALIZADAS) -->
+      <!-- ROW 2: TEAM BREAKDOWN TABLES -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
         <!-- TABLE 3: Registrations by team -->
@@ -503,10 +497,11 @@
         </div>
       </section>
 
-      <!-- AFFILIATE TABLE -->
+      <!-- AFFILIATE TABLE (WITH S2P RATIO 1:X COLUMN) -->
       <section class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
-        <div class="px-6 py-4 border-b border-slate-100 bg-slate-50/50">
+        <div class="px-6 py-4 border-b border-slate-100 flex justify-between items-center bg-slate-50/50">
           <h3 class="text-sm font-bold text-slate-800 uppercase tracking-wider">Advertiser Breakdown Table</h3>
+          <span class="text-xs font-medium text-slate-500">Conversion Ratio: S2P (Users : Sign Ups)</span>
         </div>
         <div class="overflow-x-auto">
           <table class="w-full text-sm text-right">
@@ -515,24 +510,71 @@
                 <th class="py-3.5 px-4 text-left">Advertiser</th>
                 <th class="py-3.5 px-4">Sign Ups</th>
                 <th class="py-3.5 px-4">Users</th>
+                <th class="py-3.5 px-4">S2P Ratio</th>
               </tr>
             </thead>
             <tbody class="divide-y divide-slate-100 text-slate-700">
-              <tr class="hover:bg-slate-50"><td class="py-3 px-4 text-left font-medium text-slate-900">GameTime Digital</td><td class="py-3 px-4 font-mono font-bold text-amber-600">227</td><td class="py-3 px-4 font-mono font-bold text-indigo-600">13</td></tr>
-              <tr class="hover:bg-slate-50 bg-slate-50/40"><td class="py-3 px-4 text-left font-medium text-slate-900">CHANCED</td><td class="py-3 px-4 font-mono font-semibold">68</td><td class="py-3 px-4 font-mono font-semibold text-indigo-600">2</td></tr>
-              <tr class="hover:bg-slate-50"><td class="py-3 px-4 text-left font-medium text-slate-900">Basher Agency</td><td class="py-3 px-4 font-mono font-semibold">32</td><td class="py-3 px-4 font-mono text-slate-400">0</td></tr>
-              <tr class="hover:bg-slate-50 bg-slate-50/40"><td class="py-3 px-4 text-left font-medium text-slate-900">AFF 66</td><td class="py-3 px-4 font-mono font-semibold">27</td><td class="py-3 px-4 font-mono font-semibold text-indigo-600">2</td></tr>
-              <tr class="hover:bg-slate-50"><td class="py-3 px-4 text-left font-medium text-slate-900">Splash</td><td class="py-3 px-4 font-mono font-semibold">11</td><td class="py-3 px-4 font-mono font-semibold text-indigo-600">1</td></tr>
-              <tr class="hover:bg-slate-50 bg-slate-50/40"><td class="py-3 px-4 text-left font-medium text-slate-900">Acebet</td><td class="py-3 px-4 font-mono font-semibold">7</td><td class="py-3 px-4 font-mono font-semibold text-indigo-600">3</td></tr>
-              <tr class="hover:bg-slate-50"><td class="py-3 px-4 text-left font-medium text-slate-900">CoinsRoyale</td><td class="py-3 px-4 font-mono">5</td><td class="py-3 px-4 font-mono text-slate-400">0</td></tr>
-              <tr class="hover:bg-slate-50 bg-slate-50/40"><td class="py-3 px-4 text-left font-medium text-slate-900">ALL IN AFFILIATES</td><td class="py-3 px-4 font-mono">3</td><td class="py-3 px-4 font-mono text-slate-400">0</td></tr>
-              <tr class="hover:bg-slate-50"><td class="py-3 px-4 text-left font-medium text-slate-900">EPC</td><td class="py-3 px-4 font-mono">2</td><td class="py-3 px-4 font-mono text-slate-400">0</td></tr>
+              <tr class="hover:bg-slate-50">
+                <td class="py-3 px-4 text-left font-medium text-slate-900">GameTime Digital</td>
+                <td class="py-3 px-4 font-mono font-bold text-amber-600">227</td>
+                <td class="py-3 px-4 font-mono font-bold text-indigo-600">13</td>
+                <td class="py-3 px-4 font-mono font-bold text-emerald-600">1:17</td>
+              </tr>
+              <tr class="hover:bg-slate-50 bg-slate-50/40">
+                <td class="py-3 px-4 text-left font-medium text-slate-900">CHANCED</td>
+                <td class="py-3 px-4 font-mono font-semibold">68</td>
+                <td class="py-3 px-4 font-mono font-semibold text-indigo-600">2</td>
+                <td class="py-3 px-4 font-mono font-bold text-emerald-600">1:34</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="py-3 px-4 text-left font-medium text-slate-900">Basher Agency</td>
+                <td class="py-3 px-4 font-mono font-semibold">32</td>
+                <td class="py-3 px-4 font-mono text-slate-400">0</td>
+                <td class="py-3 px-4 font-mono text-slate-400">0:32</td>
+              </tr>
+              <tr class="hover:bg-slate-50 bg-slate-50/40">
+                <td class="py-3 px-4 text-left font-medium text-slate-900">AFF 66</td>
+                <td class="py-3 px-4 font-mono font-semibold">27</td>
+                <td class="py-3 px-4 font-mono font-semibold text-indigo-600">2</td>
+                <td class="py-3 px-4 font-mono font-bold text-emerald-600">1:14</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="py-3 px-4 text-left font-medium text-slate-900">Splash</td>
+                <td class="py-3 px-4 font-mono font-semibold">11</td>
+                <td class="py-3 px-4 font-mono font-semibold text-indigo-600">1</td>
+                <td class="py-3 px-4 font-mono font-bold text-emerald-600">1:11</td>
+              </tr>
+              <tr class="hover:bg-slate-50 bg-slate-50/40">
+                <td class="py-3 px-4 text-left font-medium text-slate-900">Acebet</td>
+                <td class="py-3 px-4 font-mono font-semibold">7</td>
+                <td class="py-3 px-4 font-mono font-semibold text-indigo-600">3</td>
+                <td class="py-3 px-4 font-mono font-bold text-emerald-600">1:2</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="py-3 px-4 text-left font-medium text-slate-900">CoinsRoyale</td>
+                <td class="py-3 px-4 font-mono">5</td>
+                <td class="py-3 px-4 font-mono text-slate-400">0</td>
+                <td class="py-3 px-4 font-mono text-slate-400">0:5</td>
+              </tr>
+              <tr class="hover:bg-slate-50 bg-slate-50/40">
+                <td class="py-3 px-4 text-left font-medium text-slate-900">ALL IN AFFILIATES</td>
+                <td class="py-3 px-4 font-mono">3</td>
+                <td class="py-3 px-4 font-mono text-slate-400">0</td>
+                <td class="py-3 px-4 font-mono text-slate-400">0:3</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="py-3 px-4 text-left font-medium text-slate-900">EPC</td>
+                <td class="py-3 px-4 font-mono">2</td>
+                <td class="py-3 px-4 font-mono text-slate-400">0</td>
+                <td class="py-3 px-4 font-mono text-slate-400">0:2</td>
+              </tr>
             </tbody>
             <tfoot class="border-t-2 border-slate-900 bg-white font-bold text-slate-900">
               <tr>
                 <td class="py-3.5 px-4 text-left">Grand total</td>
                 <td class="py-3.5 px-4 font-mono text-amber-600">382</td>
                 <td class="py-3.5 px-4 font-mono text-indigo-600">21</td>
+                <td class="py-3.5 px-4 font-mono text-emerald-600">1:18</td>
               </tr>
             </tfoot>
           </table>
